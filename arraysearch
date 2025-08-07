@@ -1,0 +1,28 @@
+import java.util.Scanner;
+public class ArraySearch {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter number of elements (N): ");
+        int n = scanner.nextInt();
+        int[] numbers = new int[n];
+        System.out.println("Enter " + n + " numbers:");
+        for (int i = 0; i < n; i++) {
+            numbers[i] = scanner.nextInt();
+        }
+        System.out.print("Enter number to search: ");
+        int target = scanner.nextInt();
+        int count = 0;
+        for (int num : numbers) {
+            if (num == target) {
+                count++;
+            }
+        }
+        if (count > 0) {
+            System.out.println("Number Found " + count + " times");
+        } else {
+            System.out.println("The number not available.");
+        }
+
+        scanner.close();
+    }
+}
